@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class QuickLinksSidebar {
-    WebElement parent;
+    private WebElement parent;
 
     public QuickLinksSidebar(WebElement parent) {
         this.parent = parent;

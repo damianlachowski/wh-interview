@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class CompetitionsTab {
-    WebElement parent;
+    private WebElement parent;
 
     public CompetitionsTab(WebElement parent) {
         this.parent = parent;

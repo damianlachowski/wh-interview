@@ -1,11 +1,10 @@
 package com.wh.interview.components.betting;
 
-import com.sun.jna.platform.win32.W32Errors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class BetSlipContainer {
-    WebElement parent;
+    private WebElement parent;
 
     public BetSlipContainer(WebElement parent) {
         this.parent = parent;

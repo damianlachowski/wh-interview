@@ -1,4 +1,4 @@
-package com.wh.interview;
+package com.wh.interview.helpers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class EventContainer {
-    WebElement competitionTabElement;
+    private WebElement competitionTabElement;
 
     public EventContainer(WebElement parent) {
         this.competitionTabElement = parent;

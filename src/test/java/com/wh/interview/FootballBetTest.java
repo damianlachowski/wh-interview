@@ -2,6 +2,8 @@ package com.wh.interview;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -10,6 +12,4 @@ import org.junit.runner.RunWith;
     features = "classpath:com.wh.interview/features/"
 )
 
-public class FootballBetTestRunner {
-
-}
+public class FootballBetTest {}

@@ -1,27 +1,29 @@
-package com.wh.interview.pages;
+package com.wh.interview.pages.impl.mobile;
 
-import com.wh.interview.PageObject;
+import com.wh.interview.helpers.PageObject;
+import com.wh.interview.pages.interfaces.IBettingPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
-
-public class BettingPage extends PageObject {
-    public BettingPage(WebDriver driver) {
+/**
+ * This class should implement mobile page
+ */
+public class MobileBettingPage extends PageObject implements IBettingPage {
+    public MobileBettingPage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(id = "desktop-sidebar-quick-links")
+    //todo change locators for mobile purposes
+//    @FindBy(id = "desktop-sidebar-quick-links")
     private WebElement popular;
 
-    @FindBy(id = "sidebar-left-context")
+    //    @FindBy(id = "sidebar-left-context")
     private WebElement contextSidebar;
 
-    @FindBy(id = "competitions-tab-content")
+    //    @FindBy(id = "competitions-tab-content")
     private WebElement competitionsTab;
 
-    @FindBy(id = "betslip-content")
+    //    @FindBy(id = "betslip-content")
     private WebElement betslipContainer;
 
     public WebElement getPopular() {

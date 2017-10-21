@@ -6,36 +6,28 @@ import com.wh.interview.components.betting.Event;
 import com.wh.interview.components.betting.EventContainer;
 import com.wh.interview.components.betting.FootballContextSidebar;
 import com.wh.interview.components.betting.QuickLinksSidebar;
-import com.wh.interview.pages.BettingPage;
-import org.openqa.selenium.WebDriver;
+import com.wh.interview.pages.interfaces.IBettingPage;
 
 public abstract class FootballNavigation {
-    public static void goToSportsPage(WebDriver driver) {
-        driver.get("http://sports.williamhill.com/betting/");
-    }
-
-    public static void goToFootball(BettingPage sportsPage) {
+    public static void goToFootball(IBettingPage sportsPage) {
         QuickLinksSidebar quickLinksSidebar = new QuickLinksSidebar(sportsPage.getPopular());
         quickLinksSidebar.getFootball().click();
     }
 
-    public static CompetitionsTab getFootballCompetitions(BettingPage sportsPage) {
+    public static CompetitionsTab getFootballCompetitions(IBettingPage sportsPage) {
         FootballContextSidebar footballContextSidebar = new FootballContextSidebar(sportsPage.getContextSidebar());
         footballContextSidebar.getCompetitions().click();
-        CompetitionsTab competitionsTab = new CompetitionsTab(sportsPage.getCompetitionsTab());
-
-        return competitionsTab;
+        return new CompetitionsTab(sportsPage.getCompetitionsTab());
     }
 
     public static String chooseAndGetOdd(CompetitionsTab competitionsTab) {
-        String odd = null;
+        String odd;
         EventContainer eventContainer = new EventContainer(competitionsTab.getEnglishPremierLeagueEvents());
         Event event = new Event(eventContainer.getEvents().iterator().next());
         odd = event.getHomeWin().getText();
         if (event.getHomeWin().isDisplayed()) {
             event.getHomeWin().click();
-        }
-        else {
+        } else {
             competitionsTab.getEnglishPremierLeague().click();
             event.getHomeWin().click();
         }
@@ -43,16 +35,16 @@ public abstract class FootballNavigation {
         return odd;
     }
 
-    public static void setStake(BettingPage sportsPage, double stake) {
+    public static void setStake(IBettingPage sportsPage, double stake) {
         BetSlipContainer betSlipContainer = new BetSlipContainer(sportsPage.getBetSlipContainer());
         betSlipContainer.setStake(String.valueOf(stake));
     }
 
-    public static String getRerun(BettingPage sportsPage) {
+    public static String getReturn(IBettingPage sportsPage) {
         return new BetSlipContainer(sportsPage.getBetSlipContainer()).getTotalRerun().getText();
     }
 
-    public static String getStake(BettingPage sportsPage) {
+    public static String getStake(IBettingPage sportsPage) {
         return new BetSlipContainer(sportsPage.getBetSlipContainer()).getTotalStake().getText();
     }
 }
