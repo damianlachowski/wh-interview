@@ -11,9 +11,11 @@ Feature: Football bet
     Then Proper odd and return are displayed
 
     Examples:
-      | stake |
-      | 0.05  |
-      | 20    |
-      | -10   |
-      | 10.258|
-      |1000000|
+      |  stake  |
+      |  0.05   |
+      |   20    |
+      |  -10    |
+      | 10.258  |
+      | 1000000 |
+      |  10,50  |
+      |    0    |
