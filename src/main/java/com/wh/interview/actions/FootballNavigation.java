@@ -7,6 +7,7 @@ import com.wh.interview.components.betting.EventContainer;
 import com.wh.interview.components.betting.FootballContextSidebar;
 import com.wh.interview.components.betting.QuickLinksSidebar;
 import com.wh.interview.pages.interfaces.IBettingPage;
+import org.openqa.selenium.By;
 
 
 // Class for navigation through the betting page. It utilizes betting related page objects.
@@ -29,19 +30,14 @@ public abstract class FootballNavigation {
 
     // Method that clicks home team win in first event from English Premier League
     public static String chooseAndGetOdd(CompetitionsTab competitionsTab) {
-        String odd;
-        EventContainer eventContainer = new EventContainer(competitionsTab.getEnglishPremierLeagueEvents());
-        Event event = new Event(eventContainer.getEvents().iterator().next());
-        // If event is displayed then click odd for home win
-        if (event.getHomeWin().isDisplayed()) {
-            odd = event.getHomeWin().getText();
-            event.getHomeWin().click();
-        // If event is not displayed then click "English Premier League" competition and then click odd for home win
-        } else {
+        // Check whethet English Premier League is expanded and if not click it to expand
+        if(!competitionsTab.isPremierLeagueExpanded()) {
             competitionsTab.getEnglishPremierLeague().click();
-            odd = event.getHomeWin().getText();
-            event.getHomeWin().click();
         }
+        EventContainer eventContainer = new EventContainer(competitionsTab.getEnglishPremierLeagueEvents());
+        Event event = new Event(eventContainer.getEvents().get(0));
+        String odd = event.getHomeWin().getText();
+        event.getHomeWin().click();
 
         return odd;
     }

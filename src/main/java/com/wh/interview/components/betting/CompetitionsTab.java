@@ -18,4 +18,8 @@ public class CompetitionsTab {
     public WebElement getEnglishPremierLeagueEvents() {
         return getEnglishPremierLeague().findElement(By.xpath("./ancestor::li[1]/following::li[1]"));
     }
+
+    public boolean isPremierLeagueExpanded() {
+        return getEnglishPremierLeagueEvents().getAttribute("class").contains("expanded");
+    }
 }
