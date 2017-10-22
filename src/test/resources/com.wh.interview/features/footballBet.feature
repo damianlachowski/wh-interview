@@ -14,3 +14,6 @@ Feature: Football bet
       | stake |
       | 0.05  |
       | 20    |
+      | -10   |
+      | 10.258|
+      |1000000|
