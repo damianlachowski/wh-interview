@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/*
+Class implements web betting page
+ */
 public class WebBettingPage extends PageObject implements IBettingPage{
     public WebBettingPage(WebDriver driver) {
         super(driver);

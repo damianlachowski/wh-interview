@@ -3,22 +3,23 @@ package com.wh.interview.components.betting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+// Class that represents page object "Bet Slip" container
 public class BetSlipContainer {
-    private WebElement parent;
+    private WebElement bettingPage;
 
     public BetSlipContainer(WebElement parent) {
-        this.parent = parent;
+        this.bettingPage = parent;
     }
 
     public void setStake(String stake) {
-        parent.findElement(By.className("betslip-selection__stake-input")).sendKeys(stake);
+        bettingPage.findElement(By.className("betslip-selection__stake-input")).sendKeys(stake);
     }
 
-    public WebElement getTotalRerun() {
-        return parent.findElement(By.id("total-to-return-price"));
+    public WebElement getTotalReturn() {
+        return bettingPage.findElement(By.id("total-to-return-price"));
     }
 
     public WebElement getTotalStake() {
-        return parent.findElement(By.id("total-stake-price"));
+        return bettingPage.findElement(By.id("total-stake-price"));
     }
 }

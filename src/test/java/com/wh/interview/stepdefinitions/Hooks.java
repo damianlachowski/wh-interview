@@ -28,6 +28,7 @@ public class Hooks {
         }
 
         switch (browser) {
+            // Initialize mobile Chrome browser
             case MOBILE:
                 Map<String, String> mobileEmulation = new HashMap<>();
                 mobileEmulation.put("deviceName", "Nexus 5");
@@ -35,6 +36,7 @@ public class Hooks {
                 chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
                 driver = new ChromeDriver(chromeOptions);
                 break;
+            // Initialize desktop Chrome browser
             case DESKTOP:
                 driver = new ChromeDriver();
                 driver.manage().window().maximize();
@@ -59,6 +61,7 @@ public class Hooks {
         return driver;
     }
 
+    // Method that returns betting page mobile or desktop
     public static IHomePage getHomePage() {
         driver.get(HOME_PAGE_URL);
 

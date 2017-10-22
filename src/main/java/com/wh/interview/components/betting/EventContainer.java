@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
+// Class that represents page object event container eg. English Premier League
 public class EventContainer {
     private WebElement competitionTabElement;
 

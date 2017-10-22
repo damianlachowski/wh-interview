@@ -10,5 +10,6 @@ import org.junit.runner.RunWith;
         features = "classpath:com.wh.interview/features/"
 )
 
+// Football test runner
 public class FootballBetTest {
 }

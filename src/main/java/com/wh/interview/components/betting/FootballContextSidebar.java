@@ -3,34 +3,35 @@ package com.wh.interview.components.betting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+// Class that represents page object "Football" sidebar under "Popular" sidebar
 public class FootballContextSidebar {
-    private WebElement parent;
+    private WebElement contextSidebar;
 
     public FootballContextSidebar(WebElement parent) {
-        this.parent = parent;
+        this.contextSidebar = parent;
     }
 
     public WebElement getDailyList() {
-        return parent.findElement(By.id("nav-football-matches"));
+        return contextSidebar.findElement(By.id("nav-football-matches"));
     }
 
     public WebElement getInPlay() {
-        return parent.findElement(By.id("nav-football-inplay"));
+        return contextSidebar.findElement(By.id("nav-football-inplay"));
     }
 
     public WebElement getCoupons() {
-        return parent.findElement(By.id("nav-football-coupons"));
+        return contextSidebar.findElement(By.id("nav-football-coupons"));
     }
 
     public WebElement getCompetitions() {
-        return parent.findElement(By.id("nav-football-competitions"));
+        return contextSidebar.findElement(By.id("nav-football-competitions"));
     }
 
     public WebElement getStats() {
-        return parent.findElement(By.id("nav-football-stats"));
+        return contextSidebar.findElement(By.id("nav-football-stats"));
     }
 
     public WebElement getVirtualWorld() {
-        return parent.findElement(By.id("nav-football-virtualworld"));
+        return contextSidebar.findElement(By.id("nav-football-virtualworld"));
     }
 }

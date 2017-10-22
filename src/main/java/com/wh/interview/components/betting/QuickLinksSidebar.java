@@ -3,30 +3,31 @@ package com.wh.interview.components.betting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+// Class that represents page object "Popular"
 public class QuickLinksSidebar {
-    private WebElement parent;
+    private WebElement popular;
 
     public QuickLinksSidebar(WebElement parent) {
-        this.parent = parent;
+        this.popular = parent;
     }
 
     public WebElement getInPlay() {
-        return parent.findElement(By.id("nav-in-play"));
+        return popular.findElement(By.id("nav-in-play"));
     }
 
     public WebElement getFootball() {
-        return parent.findElement(By.id("nav-football"));
+        return popular.findElement(By.id("nav-football"));
     }
 
     public WebElement getHorses() {
-        return parent.findElement(By.id("nav-horses"));
+        return popular.findElement(By.id("nav-horses"));
     }
 
     public WebElement getTennis() {
-        return parent.findElement(By.id("nav-tennis"));
+        return popular.findElement(By.id("nav-tennis"));
     }
 
     public WebElement getGreyhounds() {
-        return parent.findElement(By.id("nav-greyhounds"));
+        return popular.findElement(By.id("nav-greyhounds"));
     }
 }

@@ -1,5 +1,6 @@
 package com.wh.interview.stepdefinitions;
 
+import com.wh.interview.BaseTest;
 import com.wh.interview.components.betting.CompetitionsTab;
 import com.wh.interview.helpers.Helper;
 import com.wh.interview.pages.interfaces.IBettingPage;
@@ -17,30 +18,30 @@ import static org.junit.Assert.assertEquals;
 
 public class FootballBetStepDefs implements En {
 
-    private double stake = 0.0;
+    private double stake;
     private String odd;
-    private IBettingPage sportsPage;
+    private IBettingPage bettingPage;
     private CompetitionsTab competitionsTab;
 
     public FootballBetStepDefs() {
         Given("^Customer is on William Hill betting page$", () -> {
             WebDriver driver = Hooks.getDriver();
-            sportsPage = Hooks.getHomePage().getBettingPage(driver);
+            bettingPage = Hooks.getHomePage().getBettingPage(driver);
         });
         When("^Customer navigates to a Premiership football event$", () -> {
-            goToFootball(sportsPage);
-            competitionsTab = getFootballCompetitions(sportsPage);
+            goToFootball(bettingPage);
+            competitionsTab = getFootballCompetitions(bettingPage);
             odd = chooseAndGetOdd(competitionsTab);
         });
         When("^Customer bets (.+) for the home team to ‘Win’$", (Double declaredStake) -> {
-            setStake(sportsPage, declaredStake);
+            setStake(bettingPage, declaredStake);
             stake = declaredStake;
         });
         Then("^Proper odd and return are displayed$", () -> {
             String expectedReturn = Helper.calculateReturn(stake, odd);
 
-            assertEquals("Verfiy return", expectedReturn, getReturn(sportsPage));
-            assertEquals("Verify stake", setNumberFormat(stake), getStake(sportsPage));
+            assertEquals("Verfiy return", expectedReturn, getReturn(bettingPage));
+            assertEquals("Verify stake", setNumberFormat(stake), getStake(bettingPage));
         });
     }
 }

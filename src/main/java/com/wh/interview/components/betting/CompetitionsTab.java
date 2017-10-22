@@ -3,15 +3,16 @@ package com.wh.interview.components.betting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+// Class that represents page object "Competitions" tab
 public class CompetitionsTab {
-    private WebElement parent;
+    private WebElement bettingPage;
 
     public CompetitionsTab(WebElement parent) {
-        this.parent = parent;
+        this.bettingPage = parent;
     }
 
     public WebElement getEnglishPremierLeague() {
-        return parent.findElement(By.linkText("English Premier League"));
+        return bettingPage.findElement(By.linkText("English Premier League"));
     }
 
     public WebElement getEnglishPremierLeagueEvents() {

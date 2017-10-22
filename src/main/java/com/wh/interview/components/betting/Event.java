@@ -5,11 +5,12 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
+// Class that represents page object event
 public class Event {
-    private WebElement parent;
+    private WebElement event;
 
     public Event(WebElement parent) {
-        this.parent = parent;
+        this.event = parent;
     }
 
     public WebElement getHomeWin() {
@@ -25,6 +26,6 @@ public class Event {
     }
 
     private List<WebElement> getOddButtons() {
-        return parent.findElements(By.className("oddsbutton"));
+        return event.findElements(By.className("oddsbutton"));
     }
 }

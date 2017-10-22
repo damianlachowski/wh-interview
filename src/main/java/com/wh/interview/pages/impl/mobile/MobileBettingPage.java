@@ -5,8 +5,8 @@ import com.wh.interview.pages.interfaces.IBettingPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-/**
- * This class should implement mobile page
+/*
+This class should implement mobile page
  */
 public class MobileBettingPage extends PageObject implements IBettingPage {
     public MobileBettingPage(WebDriver driver) {
