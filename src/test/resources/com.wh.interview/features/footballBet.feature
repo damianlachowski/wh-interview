@@ -10,7 +10,7 @@ Feature: Football bet
     And Customer bets <stake> for the home team to ‘Win’
     Then Proper odd and return are displayed
 
-  Examples:
-  | stake |
-  | 0.05  |
-  |  20   |
+    Examples:
+      | stake |
+      | 0.05  |
+      | 20    |

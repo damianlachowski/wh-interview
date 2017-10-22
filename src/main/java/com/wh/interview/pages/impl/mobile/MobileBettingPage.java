@@ -13,8 +13,8 @@ public class MobileBettingPage extends PageObject implements IBettingPage {
         super(driver);
     }
 
-    //todo change locators for mobile purposes
-//    @FindBy(id = "desktop-sidebar-quick-links")
+    //TODO: change locators for mobile purposes
+    //    @FindBy(id = "desktop-sidebar-quick-links")
     private WebElement popular;
 
     //    @FindBy(id = "sidebar-left-context")

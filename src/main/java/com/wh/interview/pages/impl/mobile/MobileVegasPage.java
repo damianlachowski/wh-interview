@@ -11,6 +11,7 @@ public class MobileVegasPage implements IVegasPage {
     public MobileVegasPage(WebDriver driver) {
         this.driver = driver;
     }
+
     @Override
     public void samplePageObjectImplementation() {
         LOGGER.info("Mobile Vegas Page implementation");

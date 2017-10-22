@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 
 public class Helper {
     public static String calculateReturn(Double stake, String odd) {
-        double calculatedReturn = 0.;
+        double calculatedReturn;
         if (!odd.contains("/")) {
             throw new IllegalStateException("Invalid bet format, doesn't contain slash: " + odd);
         }

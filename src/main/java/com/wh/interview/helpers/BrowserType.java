@@ -6,7 +6,7 @@ public enum BrowserType {
 
     private final String browser;
 
-    private BrowserType(final String browser) {
+    BrowserType(final String browser) {
         this.browser = browser;
     }
 

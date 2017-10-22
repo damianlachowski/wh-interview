@@ -24,7 +24,7 @@ public class Event {
         return getOddButtons().get(2);
     }
 
-    public List<WebElement> getOddButtons() {
+    private List<WebElement> getOddButtons() {
         return parent.findElements(By.className("oddsbutton"));
     }
 }
