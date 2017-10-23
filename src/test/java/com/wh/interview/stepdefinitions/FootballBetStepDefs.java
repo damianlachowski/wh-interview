@@ -1,6 +1,5 @@
 package com.wh.interview.stepdefinitions;
 
-import com.wh.interview.BaseTest;
 import com.wh.interview.components.betting.CompetitionsTab;
 import com.wh.interview.helpers.Helper;
 import com.wh.interview.pages.interfaces.IBettingPage;
