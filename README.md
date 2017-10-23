@@ -13,5 +13,5 @@ IDE:
 Note: Mobile page objects are not implemented yet, so please remember that test can fail because of that.
 
 Report
-HTML test report is generated to:
+* HTML test report is generated to:
 target/cucumber-report/index.html
