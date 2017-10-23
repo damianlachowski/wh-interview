@@ -1,10 +1,12 @@
 # wh-interview
 Start-up
+
 Maven:
 * To run the test on Chrome desktop browser use maven and run the command:
 mvn clean test "-Dcucumber.options=--tags @football" -Dbrowser.type=Desktop
 * To run the test on Chrome mobile browser use maven and run the command:
 mvn clean test "-Dcucumber.options=--tags @football" -Dbrowser.type=Mobile
+
 IDE:
 * To run test from IDE just run "FootballBetTest.java"
 
