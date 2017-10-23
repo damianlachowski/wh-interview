@@ -1,15 +1,14 @@
 package com.wh.interview.pages.impl.mobile;
 
+import com.wh.interview.helpers.PageObject;
 import com.wh.interview.pages.interfaces.IBettingPage;
 import com.wh.interview.pages.interfaces.IHomePage;
 import com.wh.interview.pages.interfaces.IVegasPage;
 import org.openqa.selenium.WebDriver;
 
-public class MobileHomePage implements IHomePage {
-    private WebDriver driver;
-
+public class MobileHomePage extends PageObject implements IHomePage {
     public MobileHomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     @Override
